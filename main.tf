@@ -10,8 +10,8 @@ terraform {
 
 
 provider "tfe" {
-  hostname = proj-sb-core-variables.hostname.id # Update tf variables in TFCB to app.terraform.io
-  token    = var.tfcb_token # Enter you TFCB Token. Mark as sensitive
+  #hostname = var.hostname # Update tf variables in TFCB to app.terraform.io
+  #token    = var.tfcb_token # Enter you TFCB Token. Mark as sensitive
   version  = "~> 0.27.0"
 }
 
