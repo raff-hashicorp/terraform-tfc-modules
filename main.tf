@@ -29,9 +29,7 @@ provider "tfe" {
 # Create the core set of workspaces
 resource "tfe_workspace" "proj-sb-appid-workspace" {
   for_each = toset(local.workspace_names)
-  triggers = {
     name = each.value
-    organization = var.tfcb_org
-  }
-  #organization = var.tfcb_org # Update tf variables in TFCB to our workshop environment
+ 
+  organization = var.tfcb_org # Update tf variables in TFCB to our workshop environment
 }
