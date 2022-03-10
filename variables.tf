@@ -6,7 +6,12 @@ variable "hostname" {
     description = "tfc/tfcb hostname"
 }
 
+variable "appid" {
+    description = "proj-sb ApplicationID"
+    default     = "core"
+}
+
 variable "workspace_names" {
-    default     = ["bob", "kevin", "stewart"]
+    default     = ["prod", "non prod", "dev"]
     description = "workspace names"
 }
