@@ -36,12 +36,3 @@ resource "tfe_workspace" "proj-sb-appid-workspace" {
   organization = var.tfcb_org # Update tf variables in TFCB to our workshop environment
 }
 
-
-module "workspace" {
-  source = "./terraform-tfc-modules/terraform-tfc-workspace"
-
-  tags = {
-    Terraform   = "true"
-    Environment = "dev"
-  }
-}
