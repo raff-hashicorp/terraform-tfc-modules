@@ -18,7 +18,6 @@ terraform {
 
 provider "tfe" {
   hostname = var.hostname # Update tf variables in TFCB to app.terraform.io
-  token    = var.tfcb_token # Enter you TFCB Token. Mark as sensitive
 }
 
 # Create an organization, Not required for this exercise
