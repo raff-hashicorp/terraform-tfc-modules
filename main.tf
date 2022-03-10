@@ -26,5 +26,5 @@ provider "tfe" {
 resource "tfe_workspace" "test" {
   for_each = toset( ["proj-sb-APPID-Non-Prod", "proj-sb-APPID-Prod"] )
   name         = each.value # Update tf variables in TFCB to our workshop environment
-  organization = var.organization # Update tf variables in TFCB to our workshop environment
+  organization = var.tfcb_org # Update tf variables in TFCB to our workshop environment
 }
