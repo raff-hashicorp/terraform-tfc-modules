@@ -1,3 +1,7 @@
+locals {
+  workspace_names = ["bob", "kevin", "stewart"]
+}
+
 terraform {
   cloud {
     organization = "bns-terraform-workshop-rs"
@@ -23,8 +27,11 @@ provider "tfe" {
 ## Waiting on Feature Request to be able to build Variable Sets
 
 # Create the core set of workspaces
-resource "tfe_workspace" "test" {
-  for_each = toset( ["proj-sb-APPID-Non-Prod", "proj-sb-APPID-Prod"] )
-  name         = each.key # Update tf variables in TFCB to our workshop environment
-  organization = var.tfcb_org # Update tf variables in TFCB to our workshop environment
+resource "tfe_workspace" "proj-sb-appid-workspace" {
+  for_each = toset(local.workspace_names)
+  triggers = {
+    name = each.value
+    organization = var.tfcb_org
+  }
+  #organization = var.tfcb_org # Update tf variables in TFCB to our workshop environment
 }
