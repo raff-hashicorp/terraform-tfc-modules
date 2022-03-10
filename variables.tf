@@ -15,3 +15,9 @@ variable "workspace_names" {
     default     = ["prod", "non prod", "dev"]
     description = "workspace names"
 }
+
+
+variable "prefix" {
+    description = "proj-sb ApplicationID"
+    default     = "proj-sb"
+}
