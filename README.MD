@@ -14,11 +14,7 @@ This module provisions a Terraform Cloud / Terraform Enterprise workspace
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| external\_id | The workspace's opaque external ID, which looks like `ws-<RANDOM STRING>` |
-| id | The workspace's human-readable ID, which looks like `<ORGANIZATION>/<WORKSPACE>`. |
+TBD
 
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Appendix
