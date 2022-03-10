@@ -10,7 +10,7 @@ This module provisions a Terraform Cloud / Terraform Enterprise workspace
 |------|-------------|:----:|:-----:|:-----:|
 | name | Name of the workspace | string | n/a | yes |
 | organization | Name of the organization. | string | n/a | yes |
-| working\_directory | A relative path that Terraform will execute within. Defaults to the root of your repository. | string | `"null"` | no |
+
 
 ## Outputs
 
