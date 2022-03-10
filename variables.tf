@@ -5,11 +5,8 @@ variable "tfcb_org" {
 variable "hostname" {
     description = "tfc/tfcb hostname"
 }
-variable "tfcb_token" {
-    description = "tfcb token"
-}
 
 variable "workspace_names" {
     default     = ["bob", "kevin", "stewart"]
-    description = "tfcb token"
+    description = "workspace names"
 }
