@@ -4,6 +4,7 @@ variable "tfcb_org" {
 }
 variable "hostname" {
     description = "tfc/tfcb hostname"
+    default     = "app.terraform.io"
 }
 
 variable "appid" {
@@ -12,12 +13,12 @@ variable "appid" {
 }
 
 variable "workspace_names" {
-    default     = ["prod", "non prod", "dev"]
+    default     = ["prod", "nonprod", "dev"]
     description = "workspace names"
 }
 
 
 variable "prefix" {
-    description = "proj-sb ApplicationID"
+    description = "unique Prefix"
     default     = "proj-sb"
 }
