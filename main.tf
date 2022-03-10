@@ -7,8 +7,6 @@ terraform {
   }
 }
 
-provider "tfe" {
-}
 
 # Create the core set of workspaces
 resource "tfe_workspace" "proj-sb-appid-workspace" {
